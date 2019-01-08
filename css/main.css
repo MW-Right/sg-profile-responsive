@@ -1,0 +1,163 @@
+/* Main Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 10px;
+}
+body {
+    background: #363636;
+}
+/* Personal Div */
+.personal {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    top: 10px;
+    margin: 0 10px;
+    border: 1px solid black;
+    align-items: center;
+    background: #a1a1a1;
+    opacity: 0.7;
+}
+.personal img {
+    height: 25%;
+    width: 25%;
+    max-width: 150px;
+    max-height:150px;
+    border-radius: 50%;
+    border:3px solid black;
+}
+.personal div :not(.pitch) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.0625em;
+    margin: 0 5px 10px;
+    text-align: center;
+}
+.pitch {
+    padding: 0 5px;
+}
+.personal div > * {
+    margin:5px;
+}
+
+/* Skills Div */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px 10px;
+    padding: 10px 0;
+    background: #a1a1a1;
+    opacity: 0.7;
+}
+.skills > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+.left-list,
+.right-list {
+    width: 50%;
+}
+.skills h3 {
+    display: block;
+    text-align: center;
+}
+/* Education */
+.education {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    background: orange url(../images/moren-hsu-359121-unsplash.jpg);
+    background-size: 100%; 
+    background-attachment: fixed;  
+}
+.education > * {
+    margin: 10px;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;    
+}
+/* Uni */
+.uni {
+    padding: 10px;
+}
+.uni div {
+    margin: 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.uni div > * {
+    width: 100%;
+}
+.uni div h5 {
+    text-align: left;
+}
+.uni div .grade {
+    text-align: end;
+    padding: 0 10px;
+}
+.uni h6,
+.uni p {
+    margin-top: 0;
+    line-height: 1.0625em;
+}
+/* School */
+.school {
+    padding:10px;
+}
+.school > * {
+    margin: 5px 0 0;
+}
+/* Timeline */
+/* .experience * {
+    box-sizing: border-box;
+} */
+.experience {
+    background-size: 100%;
+    background-attachment: fixed;
+    margin-top: 50px;
+}
+.experience h4 {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+}
+.jobs {
+    background: orange url(../images/pierre-chatel-innocenti-1254053-unsplash.jpg);
+    margin: 20px 0 0;
+    padding: 10px;
+}
+.jobs > div {
+    border-radius: 10px;
+    background: rgba(172,172,172,0.7)
+}
+/* Media Queries */
+@media (min-width: 940px) {
+    .personal {
+        max-height: 150px;
+    }
+}
+@media (max-width: 500px) {
+    .personal {
+        flex-direction: column;
+        padding: 10px 0 0;
+    }
+    .skills div,
+    .education {
+        flex-direction: column;
+    }
+    .skills div * {
+        width: 100%;
+    }
+    .personal,
+    .skills,
+    .education {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
