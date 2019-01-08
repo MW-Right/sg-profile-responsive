@@ -113,28 +113,72 @@ body {
 .school > * {
     margin: 5px 0 0;
 }
+
+
 /* Timeline */
-/* .experience * {
-    box-sizing: border-box;
-} */
 .experience {
-    background-size: 100%;
-    background-attachment: fixed;
-    margin-top: 50px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 .experience h4 {
     text-align: center;
-    font-size: 26px;
+    margin-bottom: 0;
+    font-size: 2em;
+    line-height: 2.5em;
+}
+.experience * {
+    box-sizing:border-box;
+    background: orange;
+    background-size: 100%;
+}
+.experience::after {
+    content:'';
+    position: absolute;
+    width: 6px;
+    background: #000;
+    top: 60px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+.container {
+    padding: 10px 20px;
+    position: relative;
+    background: orange;
+    width: 45%;
+}
+.container::after {
+    content:'';
+    position: absolute;
+    width: 25px;
+    height:25px;
+    right: -76px;
+    background: white;
+    border: 4px solid tomato;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.left {
+    left:0;
+}
+.right {
+    left: 55%;
+}
+.right::after {
+    left:-77px;
+}
+.content,
+.content * {
+    background: #363636;
     color: white;
 }
-.jobs {
-    background: orange url(../images/pierre-chatel-innocenti-1254053-unsplash.jpg);
-    margin: 20px 0 0;
-    padding: 10px;
-}
-.jobs > div {
-    border-radius: 10px;
-    background: rgba(172,172,172,0.7)
+.content {
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 5px;
 }
 /* Media Queries */
 @media (min-width: 940px) {
@@ -142,7 +186,7 @@ body {
         max-height: 150px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .personal {
         flex-direction: column;
         padding: 10px 0 0;
@@ -159,5 +203,20 @@ body {
     .education {
         width: 100%;
         margin: 10px 0;
+    }
+    .experience::after {
+        left: 31px;
+    }
+    .container {
+        width: 100%;
+        left: 60px;
+        background: inherit;
+    }
+    .left::after,
+    .right::after {
+        left: -45px;
+    }
+    .right {
+        left: 60px;
     }
 }
